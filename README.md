@@ -1,11 +1,8 @@
 # ViaBTC Exchange Server
 
-The fork of original repo with `docker-compose` support.
+这个版本做了一下修改
 
-[<img src="https://raw.githubusercontent.com/morejust/foundation/master/madebymorejust.png" width="100">](https://morejust.foundation/?from=viabtc_exchange_server)
+支持docker自动编译viabtc_exchange_server
+修改了accessws中的config.json，采用nginx来代理websocket，解决很多人发现websocket不工作的问题，ws端口对外暴露改为8090，http为8080
+注意，如果你采用了阿里clound的ECS或者亚马逊的AWS的服务器，记得在控制台放开安全组策略，这些端口都要允许访问，否则websocket仍然不能工作
 
-Mage by [Morejust Foundation](https://github.com/morejust).
-
------
-Follow [@ohld](https://github.com/ohld) for new open source crypto projects.
- 
